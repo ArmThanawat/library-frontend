@@ -14,6 +14,7 @@ type Book = {
     genre: string;
     description: string;
     isbn: string;
+    available: boolean;
     };
 
     export default function HomePage() {
@@ -50,7 +51,7 @@ type Book = {
             </section>
 
             {/* Search Bar */}
-            <section className="flex justify-center mb-12 text-gray-500">
+            <section className="flex justify-center mb-12 text-gray-400">
             <input
                 type="text"
                 placeholder="Search for books..."

@@ -8,9 +8,16 @@ export default function Header() {
             <Link href="/">
             <span className="text-xl font-bold text-gray-800 cursor-pointer">📚 LibraryApp</span>
             </Link>
-            <Link href="/manage" className="text-gray-600 hover:text-gray-800 font-medium">
-            Manage Books
-            </Link>
+            <div className="flex gap-4">
+                <Link href="/manage" className="text-gray-600 hover:text-gray-800 font-medium">
+                Manage Books
+                </Link>
+                <Link href="/borrowed" className="text-gray-600 hover:text-gray-800 font-medium">
+                Borrowed Books
+                </Link>
+                
+            </div>
+            
             <Link href="/login">
             <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
                 Login
