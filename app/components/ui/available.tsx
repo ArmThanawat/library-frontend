@@ -22,7 +22,7 @@ export default function AvailableBooks({ books, onBorrow }: AvailableBooksProps)
 
     return (
         <>
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">Books Available to Borrow</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Available Books</h2>
         <section className="mt-12">
         
         <div className="min-h-[380px] md:min-h-[450px]">

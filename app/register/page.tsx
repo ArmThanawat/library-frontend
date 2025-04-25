@@ -5,6 +5,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+// import Footer from "../components/ui/footer";
+import Header from "../components/ui/header";
 
 export default function RegisterPage() {
     const router = useRouter();
@@ -77,6 +79,8 @@ export default function RegisterPage() {
     };
 
     return (
+        <>
+        <Header/>
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
         <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
             <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Create Your Account</h1>
@@ -119,7 +123,7 @@ export default function RegisterPage() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500 text-gray-600"
                 autoComplete="name"
                 />
             </div>
@@ -132,7 +136,7 @@ export default function RegisterPage() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500 text-gray-600"
                 autoComplete="email"
                 />
             </div>
@@ -145,7 +149,7 @@ export default function RegisterPage() {
                 required
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500 text-gray-600"
                 autoComplete="new-password"
                 />
             </div>
@@ -158,7 +162,7 @@ export default function RegisterPage() {
                 required
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500 text-gray-600"
                 autoComplete="new-password"
                 />
             </div>
@@ -172,6 +176,9 @@ export default function RegisterPage() {
             </button>
             </form>
         </div>
+        
         </div>
+        {/* <Footer/> */}
+        </>
     );
 }

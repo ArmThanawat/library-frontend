@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Header from "../components/ui/header";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -43,6 +44,8 @@ export default function LoginPage() {
     };
 
     return (
+        <>
+        <Header/>
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
         <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
             <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Library Login</h1>
@@ -82,7 +85,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500 text-gray-600"
                 />
             </div>
 
@@ -93,7 +96,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500 text-gray-600"
                 />
             </div>
 
@@ -107,5 +110,6 @@ export default function LoginPage() {
             </form>
         </div>
         </div>
+        </>
     );
 }
