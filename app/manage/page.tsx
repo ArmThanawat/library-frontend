@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import Header from "../components/ui/header";
 import Footer from "../components/ui/footer";
 
-// Define the Book type
 type Book = {
   book_id: number;
   title: string;
@@ -15,7 +14,6 @@ type Book = {
   isbn: string;
 };
 
-// Form input type (same as Book but book_id is optional)
 type BookFormInput = Omit<Book, "book_id"> & { book_id?: number };
 
 export default function BookPage() {
@@ -107,7 +105,7 @@ export default function BookPage() {
   };
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 min-h-screen">
       <Header />
       <main className="max-w-6xl mx-auto mt-6 p-6 bg-white text-gray-900 min-h-screen">
         <h1 className="text-3xl font-bold mb-6 text-center">Book Manager</h1>

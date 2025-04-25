@@ -44,13 +44,13 @@ type Book = {
         <Header />
 
         <main className="flex-grow max-w-6xl mx-auto p-6">
-            {/* Welcome Section */}
+
             <section className="text-center mt-10 mb-12">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to LibraryApp 📚</h1>
             <p className="text-lg text-gray-600">Explore a world of knowledge through our digital library.</p>
             </section>
 
-            {/* Search Bar */}
+
             <section className="flex justify-center mb-12 text-gray-400">
             <input
                 type="text"
@@ -61,7 +61,7 @@ type Book = {
             />
             </section>
 
-            {/* Book Grid */}
+
             <AvailableBooks books={filteredBooks}/>
 
         </main>
